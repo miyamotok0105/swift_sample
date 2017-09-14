@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tns-hc-kMZ">
+                                <rect key="frame" x="56" y="547" width="263" height="30"/>
+                                <color key="backgroundColor" red="0.43505809278993113" green="0.51508272435337465" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aNF-sf-zJE"/>
+                                </constraints>
+                                <state key="normal" title="カメラを起動">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraLaunchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vzt-ep-gy2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-7R-fhZ">
+                                <rect key="frame" x="56" y="607" width="263" height="30"/>
+                                <color key="backgroundColor" red="0.64597888748686394" green="0.47293123654870595" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0d3-JW-KbC"/>
+                                </constraints>
+                                <state key="normal" title="SNS投稿">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHX-qL-4eY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-8b-GcI">
+                                <rect key="frame" x="56" y="50" width="263" height="467"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9GH-7R-fhZ" firstAttribute="top" secondItem="Tns-hc-kMZ" secondAttribute="bottom" constant="30" id="0Ul-Ja-Rho"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gqg-8b-GcI" secondAttribute="trailing" constant="40" id="Hab-Ed-7cg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9GH-7R-fhZ" secondAttribute="trailing" constant="40" id="QLK-kE-7ez"/>
+                            <constraint firstItem="Tns-hc-kMZ" firstAttribute="top" secondItem="Gqg-8b-GcI" secondAttribute="bottom" constant="30" id="YCz-aX-xQu"/>
+                            <constraint firstItem="Tns-hc-kMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="aC7-nh-ku3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9GH-7R-fhZ" secondAttribute="bottom" constant="30" id="bOQ-LU-nP4"/>
+                            <constraint firstItem="9GH-7R-fhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="j0j-H4-Xf8"/>
+                            <constraint firstItem="Gqg-8b-GcI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="rGR-G9-3Ar"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tns-hc-kMZ" secondAttribute="trailing" constant="40" id="rdv-dp-5ip"/>
+                            <constraint firstItem="Gqg-8b-GcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="ta8-Bd-AFp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImage" destination="Gqg-8b-GcI" id="ePk-xt-Ilp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
