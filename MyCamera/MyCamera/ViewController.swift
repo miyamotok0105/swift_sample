@@ -39,6 +39,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
 
     @IBAction func shareAction(_ sender: Any) {
+        if let sharedImage = photoImage.image {
+            let sharedItems = [sharedImage]
+            let controller = UIActivityViewController(activityItems: sharedItems, applicationActivities: nil)
+            controller.popoverPresentationController?.sourceView = view
+            present(controller, animated: true, completion: nil)
+            
+        }
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
