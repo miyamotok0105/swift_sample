@@ -15,7 +15,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        // ViewControllerのインスタンス生成.
+        let firstViewController = ViewController()
+        let secondViewController = ViewController2()
+        
+        // UINavigtaionController生成.
+        let navi1 = UINavigationController(rootViewController: firstViewController)
+        let navi2 = UINavigationController(rootViewController: secondViewController)
+        let controllers = [navi1, navi2]
+        
+        // UITabBarController生成.
+        let tabViewController = UITabBarController()
+        
+        // TabBarControllerのviewControllerにNavigationControllerをセット.
+        tabViewController.viewControllers = controllers
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // rootViewControllerにTabBarControllerをセット.
+        window?.rootViewController = tabViewController
+        
+        window?.makeKeyAndVisible()
+        
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.backgroundColor = UIColor.black
+//        self.window?.rootViewController = AppTabBarController()
+//        
         return true
     }
 

@@ -1,35 +1,28 @@
-//
-//  ViewController.swift
-//  UikitSample
-//
-//  Created by USER on 2017/09/16.
-//  Copyright © 2017年 USER. All rights reserved.
-//
 
 import UIKit
 
 
-//final class NavigationViewController: UINavigationController {
+//final class NavigationViewController2: UINavigationController {
 //    override func viewDidLoad() { super.viewDidLoad() }
 //}
 
-class ViewController: UIViewController {
-
+class ViewController2: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.title = "first"
+        self.title = "second"
         self.addLabel1()
         self.addButton1()
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
     func addLabel1() {
         let bWidth: CGFloat = 200
         let bHeight: CGFloat = 50
@@ -40,7 +33,7 @@ class ViewController: UIViewController {
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 20.0
         label.textColor = UIColor.white
-        label.text = "Hello Swift!!"
+        label.text = "Second view"
         label.shadowColor = UIColor.gray
         label.textAlignment = NSTextAlignment.center
         self.view.backgroundColor = UIColor.cyan
