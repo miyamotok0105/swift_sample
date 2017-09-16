@@ -1,36 +1,34 @@
-//
-//  ViewController.swift
-//  UikitSample
-//
-//  Created by USER on 2017/09/16.
-//  Copyright © 2017年 USER. All rights reserved.
-//
 
 import UIKit
 
 
-//final class NavigationViewController: UINavigationController {
+//final class NavigationViewController3: UINavigationController {
 //    override func viewDidLoad() { super.viewDidLoad() }
 //}
 
-class ViewController: UIViewController {
-
+class ViewController3: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.title = "first"
+        self.title = "ナビゲーション"
         self.addLabel1()
         self.addButton1()
-        self.addButton2()
+        
     }
-
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
     func addLabel1() {
         let bWidth: CGFloat = 200
         let bHeight: CGFloat = 50
@@ -41,7 +39,7 @@ class ViewController: UIViewController {
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 20.0
         label.textColor = UIColor.white
-        label.text = "Hello Swift!!"
+        label.text = "Second view"
         label.shadowColor = UIColor.gray
         label.textAlignment = NSTextAlignment.center
         self.view.backgroundColor = UIColor.cyan
@@ -59,31 +57,11 @@ class ViewController: UIViewController {
         myButton.backgroundColor = UIColor.red
         myButton.layer.masksToBounds = true
         myButton.layer.cornerRadius = 20.0
-        myButton.setTitle("ナビゲーションビューへ", for: .normal)
+        myButton.setTitle("ボタン(通常)", for: .normal)
         myButton.setTitleColor(UIColor.white, for: .normal)
-        myButton.setTitle("GO!!!", for: .highlighted)
+        myButton.setTitle("ボタン(押された時)", for: .highlighted)
         myButton.setTitleColor(UIColor.black, for: .highlighted)
         myButton.tag = 1
-        myButton.addTarget(self, action: #selector(ViewController.onClickMyButton(sender:)), for: .touchUpInside)
-        self.view.addSubview(myButton)
-    }
-    
-    func addButton2() {
-        var myButton: UIButton!
-        myButton = UIButton()
-        let bWidth: CGFloat = 200
-        let bHeight: CGFloat = 50
-        let posX: CGFloat = self.view.frame.width/2 - bWidth/2
-        let posY: CGFloat = self.view.frame.height/3 - bHeight/3
-        myButton.frame = CGRect(x: posX, y: posY, width: bWidth, height: bHeight)
-        myButton.backgroundColor = UIColor.red
-        myButton.layer.masksToBounds = true
-        myButton.layer.cornerRadius = 20.0
-        myButton.setTitle("コレクションビューへ", for: .normal)
-        myButton.setTitleColor(UIColor.white, for: .normal)
-        myButton.setTitle("GO!!!", for: .highlighted)
-        myButton.setTitleColor(UIColor.black, for: .highlighted)
-        myButton.tag = 2
         myButton.addTarget(self, action: #selector(ViewController.onClickMyButton(sender:)), for: .touchUpInside)
         self.view.addSubview(myButton)
     }
@@ -92,21 +70,6 @@ class ViewController: UIViewController {
         print("onClickMyButton:");
         print("sender.currentTitle: \(sender.currentTitle!)")
         print("sender.tag: \(sender.tag)")
-        
-        
-        if sender.tag == 1 {
-            let viewController3 = ViewController3()
-            self.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(viewController3, animated: true)
-            self.hidesBottomBarWhenPushed = false
-        } else if sender.tag == 2 {
-            let viewController4 = ViewController4()
-            self.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(viewController4, animated: true)
-            self.hidesBottomBarWhenPushed = false
-        }
-
-        
     }
     
 }
