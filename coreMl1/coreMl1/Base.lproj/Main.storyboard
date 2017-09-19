@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coreMl1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5L-VY-dx7">
+                                <rect key="frame" x="-4" y="20" width="383" height="313"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7K-5n-m6i">
+                                <rect key="frame" x="36" y="580" width="303" height="40"/>
+                                <color key="backgroundColor" red="0.11077233201308012" green="0.094151334593210567" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pu5-pG-PMc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="写真を撮る">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i2k-OJ-0Mt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2lw-Lb-Dfb">
+                                <rect key="frame" x="-4" y="370" width="383" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1kM-rz-kxn"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a7K-5n-m6i" secondAttribute="bottom" constant="47" id="Eii-Pj-mNF"/>
+                            <constraint firstItem="H5L-VY-dx7" firstAttribute="leading" secondItem="2lw-Lb-Dfb" secondAttribute="leading" id="IpR-gy-mte"/>
+                            <constraint firstItem="2lw-Lb-Dfb" firstAttribute="centerX" secondItem="a7K-5n-m6i" secondAttribute="centerX" id="JYo-2T-0U2"/>
+                            <constraint firstItem="a7K-5n-m6i" firstAttribute="top" secondItem="2lw-Lb-Dfb" secondAttribute="bottom" constant="82" id="OCB-eA-Pka"/>
+                            <constraint firstItem="a7K-5n-m6i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="RZ8-tm-tHG"/>
+                            <constraint firstItem="H5L-VY-dx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Xs5-mg-VUR"/>
+                            <constraint firstItem="H5L-VY-dx7" firstAttribute="trailing" secondItem="2lw-Lb-Dfb" secondAttribute="trailing" id="h8I-L7-AND"/>
+                            <constraint firstItem="H5L-VY-dx7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ncP-88-UQR"/>
+                            <constraint firstItem="2lw-Lb-Dfb" firstAttribute="top" secondItem="H5L-VY-dx7" secondAttribute="bottom" constant="37" id="sZ6-Xi-vrq"/>
+                            <constraint firstItem="H5L-VY-dx7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zyd-hx-aGb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoDisplay" destination="H5L-VY-dx7" id="a5O-Yz-Bn8"/>
+                        <outlet property="photoInfoDisplay" destination="2lw-Lb-Dfb" id="xcM-ki-CbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

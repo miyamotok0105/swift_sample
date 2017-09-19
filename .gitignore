@@ -70,5 +70,5 @@ fastlane/screenshots
 fastlane/test_output
 
 */Pods/*
-
+*.mlmodel
 
