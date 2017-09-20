@@ -58,7 +58,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
 
             DispatchQueue.main.async {
-                self.photoInfoDisplay.text = "確率 = \(Int(firstResult.confidence * 100))%(, \n 詳細 \((firstResult.identifier))"
+                self.photoInfoDisplay.text = "確率 = \(Int(firstResult.confidence * 100))% , \n 詳細 \((firstResult.identifier))"
             }
             
             guard let ciImage = CIImage(image: image) else {
@@ -76,13 +76,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 
             }
             
-            
-//            if let classification = results.first {
-//                print("identifier = \(classification.identifier)")
-//                print("confidence = \(classification.confidence)")
-//            } else {
-//                print("error")
-//            }
         }
         
         // CIImageへの変換
@@ -97,16 +90,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         
         
-//        let request = VNCoreMLRequest(model) {
-//            [weak self] request, error in
-//
-//            guard let requests = request.results as? [VNClassificationObservation],
-//                let firstResult = result.fir
-//        }
-        
-        
-        
-//        guard let model = try? VNCoreMLModel(
     }
 }
 
