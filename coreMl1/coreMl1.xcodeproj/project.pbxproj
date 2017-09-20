@@ -13,6 +13,13 @@
 		CE21AFDC1F6E1B1800915F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE21AFDB1F6E1B1800915F15 /* Assets.xcassets */; };
 		CE21AFDF1F6E1B1800915F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE21AFDD1F6E1B1800915F15 /* LaunchScreen.storyboard */; };
 		CE87C2C71F6FC7FD00137F5E /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE21AFE61F6E207F00915F15 /* Resnet50.mlmodel */; };
+		CE87C2D11F72EB5E00137F5E /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2CF1F72EB5E00137F5E /* ConfirmViewController.swift */; };
+		CE87C2D21F72EB5E00137F5E /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE87C2D01F72EB5E00137F5E /* ConfirmViewController.xib */; };
+		CE87C2D51F72EC9900137F5E /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2D41F72EC5100137F5E /* CropOverlay.swift */; };
+		CE87C2D81F72ED3A00137F5E /* CroppingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2D71F72ED3900137F5E /* CroppingParameters.swift */; };
+		CE87C2DA1F72ED9B00137F5E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2D91F72ED9A00137F5E /* CameraView.swift */; };
+		CE87C2DC1F72EDA100137F5E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2DB1F72EDA100137F5E /* CameraViewController.swift */; };
+		CE87C2DE1F72EEB900137F5E /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2DD1F72EEB900137F5E /* CameraGlobals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		CE21AFDE1F6E1B1800915F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE21AFE01F6E1B1800915F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE21AFE61F6E207F00915F15 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		CE87C2CF1F72EB5E00137F5E /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		CE87C2D01F72EB5E00137F5E /* ConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
+		CE87C2D41F72EC5100137F5E /* CropOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropOverlay.swift; sourceTree = "<group>"; };
+		CE87C2D71F72ED3900137F5E /* CroppingParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppingParameters.swift; sourceTree = "<group>"; };
+		CE87C2D91F72ED9A00137F5E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		CE87C2DB1F72EDA100137F5E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CE87C2DD1F72EEB900137F5E /* CameraGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraGlobals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 		CE21AFD31F6E1B1800915F15 /* coreMl1 */ = {
 			isa = PBXGroup;
 			children = (
+				CE87C2D61F72ED2000137F5E /* Utilities */,
+				CE87C2D31F72EC3500137F5E /* Views */,
+				CE87C2CE1F72EAFE00137F5E /* ViewController */,
 				CE21AFD41F6E1B1800915F15 /* AppDelegate.swift */,
 				CE21AFD61F6E1B1800915F15 /* ViewController.swift */,
 				CE21AFE61F6E207F00915F15 /* Resnet50.mlmodel */,
@@ -65,6 +82,34 @@
 				CE21AFE01F6E1B1800915F15 /* Info.plist */,
 			);
 			path = coreMl1;
+			sourceTree = "<group>";
+		};
+		CE87C2CE1F72EAFE00137F5E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE87C2DB1F72EDA100137F5E /* CameraViewController.swift */,
+				CE87C2CF1F72EB5E00137F5E /* ConfirmViewController.swift */,
+				CE87C2D01F72EB5E00137F5E /* ConfirmViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE87C2D31F72EC3500137F5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE87C2D91F72ED9A00137F5E /* CameraView.swift */,
+				CE87C2D41F72EC5100137F5E /* CropOverlay.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE87C2D61F72ED2000137F5E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE87C2DD1F72EEB900137F5E /* CameraGlobals.swift */,
+				CE87C2D71F72ED3900137F5E /* CroppingParameters.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +175,7 @@
 				CE21AFDF1F6E1B1800915F15 /* LaunchScreen.storyboard in Resources */,
 				CE21AFDC1F6E1B1800915F15 /* Assets.xcassets in Resources */,
 				CE21AFDA1F6E1B1800915F15 /* Main.storyboard in Resources */,
+				CE87C2D21F72EB5E00137F5E /* ConfirmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +186,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE87C2D51F72EC9900137F5E /* CropOverlay.swift in Sources */,
+				CE87C2DA1F72ED9B00137F5E /* CameraView.swift in Sources */,
 				CE21AFD71F6E1B1800915F15 /* ViewController.swift in Sources */,
 				CE87C2C71F6FC7FD00137F5E /* Resnet50.mlmodel in Sources */,
+				CE87C2D81F72ED3A00137F5E /* CroppingParameters.swift in Sources */,
+				CE87C2DE1F72EEB900137F5E /* CameraGlobals.swift in Sources */,
+				CE87C2DC1F72EDA100137F5E /* CameraViewController.swift in Sources */,
 				CE21AFD51F6E1B1800915F15 /* AppDelegate.swift in Sources */,
+				CE87C2D11F72EB5E00137F5E /* ConfirmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -253,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -271,7 +323,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miyamoto.coreMl1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -285,7 +337,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miyamoto.coreMl1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

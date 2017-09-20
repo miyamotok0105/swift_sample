@@ -1,38 +1,28 @@
 //
 //  ViewController.swift
-//  coreMl1
+//  Text Detection Starter Project
 //
-//  Created by USER on 2017/09/17.
-//  Copyright © 2017年 USER. All rights reserved.
+//  Created by Sai Kambampati on 6/21/17.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import UIKit
-import Vision
-import CoreML
 import AVFoundation
+import Vision
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
-    @IBOutlet weak var photoDisplay: UIImageView!
-    @IBOutlet weak var photoInfoDisplay: UITextView!
-    var imagePicker: UIImagePickerController!
-    //text detection
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var imageView: UIImageView!
     var session = AVCaptureSession()
     var requests = [VNRequest]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
         
-        //text detection
-//        startLiveVideo()
-//        startTextDetection()
-        
+        startLiveVideo()
+        startTextDetection()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         
     }
@@ -40,75 +30,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func takePhoto(_ sender: Any) {
-        present(imagePicker, animated: true, completion: nil)
-        
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        photoDisplay.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        photoDisplay.contentMode = UIViewContentMode.scaleAspectFit
-//        photoDisplay.contentMode = UIViewContentMode.center
-        imagePicker.dismiss(animated: true, completion: nil)
-        
-//        let confirmViewController = ConfirmViewController()
-//        confirmViewController.image = photoDisplay.image
-//        present(confirmViewController, animated: true, completion: nil)
-
-        
-        imageInference(image: (info[UIImagePickerControllerOriginalImage] as? UIImage)!)
-    }
-    
-    func imageInference(image: UIImage) {
-        
-        guard let model = try? VNCoreMLModel(for: Resnet50().model)  else {
-            fatalError("modelをロードできません。")
-        }
-        
-        // リクエスト（VNCoreMLRequest）の生成とハンドラ処理
-        let request = VNCoreMLRequest(model: model) { request, error in
-            
-            guard let results = request.results as? [VNClassificationObservation],
-                let firstResult = results.first else {
-                fatalError("Error results")
-            }
-
-
-            DispatchQueue.main.async {
-                self.photoInfoDisplay.text = "確率 = \(Int(firstResult.confidence * 100))% , \n 詳細 \((firstResult.identifier))"
-            }
-            
-            guard let ciImage = CIImage(image: image) else {
-                fatalError("Error convert CIImage")
-            }
-            
-            let imageHandler = VNImageRequestHandler(ciImage: ciImage)
-            
-            DispatchQueue.global(qos: .userInteractive).async {
-                do {
-                    try imageHandler.perform([request])
-                } catch {
-                    print("error")
-                }
-                
-            }
-            
-        }
-        
-        // CIImageへの変換
-        guard let ciImage = CIImage(image: image) else {
-            fatalError("Error convert CIImage")
-        }
-        
-        // ハンドラの生成と実行
-        let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
-        guard (try? handler.perform([request])) != nil else {
-            fatalError("Error handler.perform")
-        }
-        
-        
     }
     
     func startLiveVideo() {
@@ -126,10 +47,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         //3
         let imageLayer = AVCaptureVideoPreviewLayer(session: session)
-        imageLayer.frame = photoDisplay.bounds
-        photoDisplay.layer.addSublayer(imageLayer)
+        imageLayer.frame = imageView.bounds
+        imageView.layer.addSublayer(imageLayer)
         
         session.startRunning()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        imageView.layer.sublayers?[0].frame = imageView.bounds
     }
     
     func startTextDetection() {
@@ -147,7 +72,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let result = observations.map({$0 as? VNTextObservation})
         
         DispatchQueue.main.async() {
-            self.photoDisplay.layer.sublayers?.removeSubrange(1...)
+            self.imageView.layer.sublayers?.removeSubrange(1...)
             for region in result {
                 guard let rg = region else {
                     continue
@@ -189,34 +114,33 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
         
-        let xCord = maxX * photoDisplay.frame.size.width
-        let yCord = (1 - minY) * photoDisplay.frame.size.height
-        let width = (minX - maxX) * photoDisplay.frame.size.width
-        let height = (minY - maxY) * photoDisplay.frame.size.height
+        let xCord = maxX * imageView.frame.size.width
+        let yCord = (1 - minY) * imageView.frame.size.height
+        let width = (minX - maxX) * imageView.frame.size.width
+        let height = (minY - maxY) * imageView.frame.size.height
         
         let outline = CALayer()
         outline.frame = CGRect(x: xCord, y: yCord, width: width, height: height)
         outline.borderWidth = 2.0
         outline.borderColor = UIColor.red.cgColor
         
-        photoDisplay.layer.addSublayer(outline)
+        imageView.layer.addSublayer(outline)
     }
     
     func highlightLetters(box: VNRectangleObservation) {
-        let xCord = box.topLeft.x * photoDisplay.frame.size.width
-        let yCord = (1 - box.topLeft.y) * photoDisplay.frame.size.height
-        let width = (box.topRight.x - box.bottomLeft.x) * photoDisplay.frame.size.width
-        let height = (box.topLeft.y - box.bottomLeft.y) * photoDisplay.frame.size.height
+        let xCord = box.topLeft.x * imageView.frame.size.width
+        let yCord = (1 - box.topLeft.y) * imageView.frame.size.height
+        let width = (box.topRight.x - box.bottomLeft.x) * imageView.frame.size.width
+        let height = (box.topLeft.y - box.bottomLeft.y) * imageView.frame.size.height
         
         let outline = CALayer()
         outline.frame = CGRect(x: xCord, y: yCord, width: width, height: height)
         outline.borderWidth = 1.0
         outline.borderColor = UIColor.blue.cgColor
         
-        photoDisplay.layer.addSublayer(outline)
+        imageView.layer.addSublayer(outline)
     }
 }
-
 
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -239,4 +163,3 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
     }
 }
-
