@@ -56,9 +56,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 //        let confirmViewController = ConfirmViewController()
 //        confirmViewController.image = photoDisplay.image
 //        present(confirmViewController, animated: true, completion: nil)
-
+        let photoViewController = PhotoViewController()
+        DispatchQueue.global(qos: .default).async {
+            
+            photoViewController.image = self.photoDisplay.image
+            self.present(photoViewController, animated: true, completion: nil)
+        }
+        
+        print("photoViewController.getImage()")
+        self.photoDisplay.image = photoViewController.getImage()
         
         imageInference(image: (info[UIImagePickerControllerOriginalImage] as? UIImage)!)
+        
     }
     
     func imageInference(image: UIImage) {
@@ -68,6 +77,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         
         // リクエスト（VNCoreMLRequest）の生成とハンドラ処理
+        print("リクエスト（VNCoreMLRequest）の生成とハンドラ処理")
         let request = VNCoreMLRequest(model: model) { request, error in
             
             guard let results = request.results as? [VNClassificationObservation],
@@ -103,6 +113,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         
         // ハンドラの生成と実行
+        print("ハンドラの生成と実行")
         let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
         guard (try? handler.perform([request])) != nil else {
             fatalError("Error handler.perform")

@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         self.addLabel1()
         self.addButton1()
         self.addButton2()
+        self.addButton3()
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +89,26 @@ class ViewController: UIViewController {
         self.view.addSubview(myButton)
     }
     
+    func addButton3() {
+        var myButton: UIButton!
+        myButton = UIButton()
+        let bWidth: CGFloat = 200
+        let bHeight: CGFloat = 50
+        let posX: CGFloat = self.view.frame.width/2 - bWidth/2
+        let posY: CGFloat = self.view.frame.height/2 - bHeight/2
+        myButton.frame = CGRect(x: posX, y: posY, width: bWidth, height: bHeight)
+        myButton.backgroundColor = UIColor.red
+        myButton.layer.masksToBounds = true
+        myButton.layer.cornerRadius = 20.0
+        myButton.setTitle("へ", for: .normal)
+        myButton.setTitleColor(UIColor.white, for: .normal)
+        myButton.setTitle("GO!!!", for: .highlighted)
+        myButton.setTitleColor(UIColor.black, for: .highlighted)
+        myButton.tag = 3
+        myButton.addTarget(self, action: #selector(ViewController.onClickMyButton(sender:)), for: .touchUpInside)
+        self.view.addSubview(myButton)
+    }
+    
     internal func onClickMyButton(sender: UIButton) {
         print("onClickMyButton:");
         print("sender.currentTitle: \(sender.currentTitle!)")
@@ -103,6 +124,11 @@ class ViewController: UIViewController {
             let viewController4 = ViewController4()
             self.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(viewController4, animated: true)
+            self.hidesBottomBarWhenPushed = false
+        } else if sender.tag == 3 {
+            let viewController5 = ViewController5()
+            self.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController5, animated: true)
             self.hidesBottomBarWhenPushed = false
         }
 

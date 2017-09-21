@@ -20,6 +20,8 @@
 		CE87C2DA1F72ED9B00137F5E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2D91F72ED9A00137F5E /* CameraView.swift */; };
 		CE87C2DC1F72EDA100137F5E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2DB1F72EDA100137F5E /* CameraViewController.swift */; };
 		CE87C2DE1F72EEB900137F5E /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2DD1F72EEB900137F5E /* CameraGlobals.swift */; };
+		CE87C2E01F741E7400137F5E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2DF1F741E7400137F5E /* PhotoViewController.swift */; };
+		CE87C2E21F74261700137F5E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2E11F74261700137F5E /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CE87C2D91F72ED9A00137F5E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		CE87C2DB1F72EDA100137F5E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CE87C2DD1F72EEB900137F5E /* CameraGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraGlobals.swift; sourceTree = "<group>"; };
+		CE87C2DF1F741E7400137F5E /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CE87C2E11F74261700137F5E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				CE87C2DB1F72EDA100137F5E /* CameraViewController.swift */,
 				CE87C2CF1F72EB5E00137F5E /* ConfirmViewController.swift */,
 				CE87C2D01F72EB5E00137F5E /* ConfirmViewController.xib */,
+				CE87C2DF1F741E7400137F5E /* PhotoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			children = (
 				CE87C2DD1F72EEB900137F5E /* CameraGlobals.swift */,
 				CE87C2D71F72ED3900137F5E /* CroppingParameters.swift */,
+				CE87C2E11F74261700137F5E /* UIColor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -193,8 +199,10 @@
 				CE87C2D81F72ED3A00137F5E /* CroppingParameters.swift in Sources */,
 				CE87C2DE1F72EEB900137F5E /* CameraGlobals.swift in Sources */,
 				CE87C2DC1F72EDA100137F5E /* CameraViewController.swift in Sources */,
+				CE87C2E21F74261700137F5E /* UIColor.swift in Sources */,
 				CE21AFD51F6E1B1800915F15 /* AppDelegate.swift in Sources */,
 				CE87C2D11F72EB5E00137F5E /* ConfirmViewController.swift in Sources */,
+				CE87C2E01F741E7400137F5E /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

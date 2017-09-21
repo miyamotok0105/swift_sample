@@ -15,6 +15,7 @@
 		CE21AFC31F6DB47C00915F15 /* InitTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21AFC21F6DB47C00915F15 /* InitTabBarController.swift */; };
 		CE21AFC51F6DB7DF00915F15 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21AFC41F6DB7DF00915F15 /* ViewController3.swift */; };
 		CE21AFC71F6DBC5200915F15 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21AFC61F6DBC5200915F15 /* ViewController4.swift */; };
+		CE87C2E41F7427C200137F5E /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87C2E31F7427C200137F5E /* ViewController5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE21AFC21F6DB47C00915F15 /* InitTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitTabBarController.swift; sourceTree = "<group>"; };
 		CE21AFC41F6DB7DF00915F15 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		CE21AFC61F6DBC5200915F15 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		CE87C2E31F7427C200137F5E /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CE21AFBC1F6D9B3C00915F15 /* ViewController2.swift */,
 				CE21AFC41F6DB7DF00915F15 /* ViewController3.swift */,
 				CE21AFC61F6DBC5200915F15 /* ViewController4.swift */,
+				CE87C2E31F7427C200137F5E /* ViewController5.swift */,
 				CE21AF911F6CD9AA00915F15 /* Assets.xcassets */,
 				CE21AF931F6CD9AA00915F15 /* LaunchScreen.storyboard */,
 				CE21AF961F6CD9AA00915F15 /* Info.plist */,
@@ -151,6 +154,7 @@
 				CE21AF8B1F6CD9AA00915F15 /* AppDelegate.swift in Sources */,
 				CE21AFC31F6DB47C00915F15 /* InitTabBarController.swift in Sources */,
 				CE21AFBD1F6D9B3C00915F15 /* ViewController2.swift in Sources */,
+				CE87C2E41F7427C200137F5E /* ViewController5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
