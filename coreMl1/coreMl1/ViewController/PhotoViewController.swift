@@ -25,6 +25,9 @@ public class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("view did load")
+        
         screenWidth = self.view.bounds.width
         screenHeight = self.view.bounds.height
         width = self.image!.size.width
@@ -36,6 +39,7 @@ public class PhotoViewController: UIViewController, UIScrollViewDelegate {
         imageView.frame = rect
         imageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
         self.view.addSubview(imageView)
+        print("imageView is \(imageView)")
         
         imageFilter.image = UIImage(named: "square-targeting-interface-symbol")
         imageFilter.frame = CGRect(x:0, y:0, width:128, height:128)
@@ -158,7 +162,12 @@ public class PhotoViewController: UIViewController, UIScrollViewDelegate {
         
         let image = UIImage(named: "square-targeting-interface-symbol")
         //todo:たぶんimageView.imageがおかしい
-//        let image = imageView.image!.cropping(to: CGRect(x: Int(labelX.text ?? "0")!, y: Int(labelY.text ?? "0")!, width: 128, height: 128))
+        print("imageView is ...")
+        print(imageView)
+        print(labelX)
+        print(labelX.text)
+        
+//        let image = imageView.image.cropping(to: CGRect(x: Int(labelX.text ?? "0")!, y: Int(labelY.text ?? "0")!, width: 128, height: 128))
         return image
     }
     

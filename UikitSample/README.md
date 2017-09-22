@@ -1,4 +1,29 @@
 
+# TODO
+
+
+coremlのrequestの実行順序について    
+anamationの遅延実行について    
+
+
+- 同期と非同期
+
+http://dev.classmethod.jp/smartphone/iphone/swift-3-how-to-use-gcd-api-1/
+
+https://qiita.com/marty-suzuki/items/f0547e40dc09e790328f
+
+- 画像クロップ
+
+http://docs.fabo.io/swift/coreimage/003_coreimage.html
+
+- プロパティ監視
+
+https://swiftrithm.com/property-observers/
+
+- NotificationCenter
+
+https://qiita.com/mono0926/items/754c5d2dbe431542c75e
+
 
 # 参考
 
@@ -21,4 +46,5 @@ https://gist.github.com/KentarouKanno/f061bfd4089a4c9dff1e
 - Programming-iOS-Book-Examples
 
 https://github.com/mattneub/Programming-iOS-Book-Examples
+
 

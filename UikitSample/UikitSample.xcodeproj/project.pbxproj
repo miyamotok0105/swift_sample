@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE19BA991F7575AB00593441 /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BA981F7575AB00593441 /* ViewController6.swift */; };
 		CE21AF8B1F6CD9AA00915F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21AF8A1F6CD9AA00915F15 /* AppDelegate.swift */; };
 		CE21AF8D1F6CD9AA00915F15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21AF8C1F6CD9AA00915F15 /* ViewController.swift */; };
 		CE21AF921F6CD9AA00915F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE21AF911F6CD9AA00915F15 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE19BA981F7575AB00593441 /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		CE21AF871F6CD9AA00915F15 /* UikitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UikitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE21AF8A1F6CD9AA00915F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE21AF8C1F6CD9AA00915F15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CE21AFC41F6DB7DF00915F15 /* ViewController3.swift */,
 				CE21AFC61F6DBC5200915F15 /* ViewController4.swift */,
 				CE87C2E31F7427C200137F5E /* ViewController5.swift */,
+				CE19BA981F7575AB00593441 /* ViewController6.swift */,
 				CE21AF911F6CD9AA00915F15 /* Assets.xcassets */,
 				CE21AF931F6CD9AA00915F15 /* LaunchScreen.storyboard */,
 				CE21AF961F6CD9AA00915F15 /* Info.plist */,
@@ -153,6 +156,7 @@
 				CE21AF8D1F6CD9AA00915F15 /* ViewController.swift in Sources */,
 				CE21AF8B1F6CD9AA00915F15 /* AppDelegate.swift in Sources */,
 				CE21AFC31F6DB47C00915F15 /* InitTabBarController.swift in Sources */,
+				CE19BA991F7575AB00593441 /* ViewController6.swift in Sources */,
 				CE21AFBD1F6D9B3C00915F15 /* ViewController2.swift in Sources */,
 				CE87C2E41F7427C200137F5E /* ViewController5.swift in Sources */,
 			);

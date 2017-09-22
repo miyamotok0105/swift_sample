@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         self.addButton1()
         self.addButton2()
         self.addButton3()
+        self.addButton4()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
         let bWidth: CGFloat = 200
         let bHeight: CGFloat = 50
         let posX: CGFloat = self.view.bounds.width/2 - bWidth/2
-        let posY: CGFloat = self.view.bounds.height/10 - bHeight/10
+        let posY: CGFloat = (self.view.bounds.height/10) * 1
         let label: UILabel = UILabel(frame: CGRect(x: posX, y: posY, width: bWidth, height: bHeight))
         label.backgroundColor = UIColor.orange
         label.layer.masksToBounds = true
@@ -55,7 +56,7 @@ class ViewController: UIViewController {
         let bWidth: CGFloat = 200
         let bHeight: CGFloat = 50
         let posX: CGFloat = self.view.frame.width/2 - bWidth/2
-        let posY: CGFloat = self.view.frame.height/5 - bHeight/5
+        let posY: CGFloat = (self.view.bounds.height/10) * 2
         myButton.frame = CGRect(x: posX, y: posY, width: bWidth, height: bHeight)
         myButton.backgroundColor = UIColor.red
         myButton.layer.masksToBounds = true
@@ -75,7 +76,7 @@ class ViewController: UIViewController {
         let bWidth: CGFloat = 200
         let bHeight: CGFloat = 50
         let posX: CGFloat = self.view.frame.width/2 - bWidth/2
-        let posY: CGFloat = self.view.frame.height/3 - bHeight/3
+        let posY: CGFloat = (self.view.bounds.height/10) * 3
         myButton.frame = CGRect(x: posX, y: posY, width: bWidth, height: bHeight)
         myButton.backgroundColor = UIColor.red
         myButton.layer.masksToBounds = true
@@ -95,16 +96,36 @@ class ViewController: UIViewController {
         let bWidth: CGFloat = 200
         let bHeight: CGFloat = 50
         let posX: CGFloat = self.view.frame.width/2 - bWidth/2
-        let posY: CGFloat = self.view.frame.height/2 - bHeight/2
+        let posY: CGFloat = (self.view.bounds.height/10) * 4
         myButton.frame = CGRect(x: posX, y: posY, width: bWidth, height: bHeight)
         myButton.backgroundColor = UIColor.red
         myButton.layer.masksToBounds = true
         myButton.layer.cornerRadius = 20.0
-        myButton.setTitle("へ", for: .normal)
+        myButton.setTitle("画像ドラッグへ", for: .normal)
         myButton.setTitleColor(UIColor.white, for: .normal)
         myButton.setTitle("GO!!!", for: .highlighted)
         myButton.setTitleColor(UIColor.black, for: .highlighted)
         myButton.tag = 3
+        myButton.addTarget(self, action: #selector(ViewController.onClickMyButton(sender:)), for: .touchUpInside)
+        self.view.addSubview(myButton)
+    }
+    
+    func addButton4() {
+        var myButton: UIButton!
+        myButton = UIButton()
+        let bWidth: CGFloat = 200
+        let bHeight: CGFloat = 50
+        let posX: CGFloat = self.view.frame.width/2 - bWidth/2
+        let posY: CGFloat = (self.view.bounds.height/10) * 5
+        myButton.frame = CGRect(x: posX, y: posY, width: bWidth, height: bHeight)
+        myButton.backgroundColor = UIColor.red
+        myButton.layer.masksToBounds = true
+        myButton.layer.cornerRadius = 20.0
+        myButton.setTitle("同期 非同期へ", for: .normal)
+        myButton.setTitleColor(UIColor.white, for: .normal)
+        myButton.setTitle("GO!!!", for: .highlighted)
+        myButton.setTitleColor(UIColor.black, for: .highlighted)
+        myButton.tag = 4
         myButton.addTarget(self, action: #selector(ViewController.onClickMyButton(sender:)), for: .touchUpInside)
         self.view.addSubview(myButton)
     }
@@ -130,7 +151,13 @@ class ViewController: UIViewController {
             self.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(viewController5, animated: true)
             self.hidesBottomBarWhenPushed = false
+        } else if sender.tag == 4 {
+            let viewController6 = ViewController6()
+            self.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController6, animated: true)
+            self.hidesBottomBarWhenPushed = false
         }
+        
 
         
     }

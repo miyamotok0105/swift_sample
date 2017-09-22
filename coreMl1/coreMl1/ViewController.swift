@@ -57,14 +57,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 //        confirmViewController.image = photoDisplay.image
 //        present(confirmViewController, animated: true, completion: nil)
         let photoViewController = PhotoViewController()
-        DispatchQueue.global(qos: .default).async {
-            
+        DispatchQueue.global(qos: .default).sync {
+            print("DispatchQueue.global")
             photoViewController.image = self.photoDisplay.image
             self.present(photoViewController, animated: true, completion: nil)
+            
+            DispatchQueue.global(qos: .default).sync {
+                print("photoViewController.getImage()")
+                self.photoDisplay.image = photoViewController.getImage()
+            }
         }
         
-        print("photoViewController.getImage()")
-        self.photoDisplay.image = photoViewController.getImage()
         
         imageInference(image: (info[UIImagePickerControllerOriginalImage] as? UIImage)!)
         
