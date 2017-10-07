@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  ForceUpdate
+//  ForceUpdateManual
 //
-//  Created by USER on 2017/09/16.
+//  Created by USER on 2017/10/07.
 //  Copyright © 2017年 USER. All rights reserved.
 //
 
 import UIKit
-import Siren
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,16 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        
-//        // 強制アップデート
-//        let siren = Siren.shared
-//        siren.forceLanguageLocalization = Siren.LanguageType.Japanese  // 日本語
-//        siren.alertType = .force  // 強制アップデートしか選択肢が無いオプション
-//        siren.checkVersion(checkType: .immediately)  // .Daily or .Weekly とかチェック頻度を設定できる
-        
-        
-        
         return true
     }
 
@@ -45,13 +34,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        let requireVersion = RequireVersionController.shared
+        requireVersion.compareVersion()
         
 //        let siren = Siren.shared
 //        siren.forceLanguageLocalization = Siren.LanguageType.Japanese
 //        siren.alertType = .force
 //        siren.checkVersion(checkType: .immediately)
-        
-        print("アプリを開いた時に起動したければ、ここに入れればいい!!")
+
         
         
     }
@@ -60,8 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+
 }
-
-
-
 

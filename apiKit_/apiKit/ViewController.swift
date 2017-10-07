@@ -9,6 +9,9 @@
 import UIKit
 import Foundation
 //import SwiftyJSON
+import APIKit
+import Himotoki
+
 
 class ViewController: UIViewController {
 
@@ -55,5 +58,24 @@ class ViewController: UIViewController {
                 task.resume()
         
     }
+    
+    //------------------------------------------------------------
+    
+//    
+//    protocol GithubRequest: Request { }
+//    
+//    extension GithubRequest {
+//        var baseURL: URL {
+//            return URL(string: "https://api.github.com")!
+//        }
+//    }
+//    
+//    extension GithubRequest where Response: Decodable {
+//        func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+//            return try decodeValue(object)
+//        }
+//    }
+    
+    
 }
 
