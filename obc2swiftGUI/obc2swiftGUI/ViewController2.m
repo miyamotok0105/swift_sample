@@ -18,11 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //ラベル
     UILabel *firstLabel = [[UILabel alloc] init];
     int screenWidth = self.view.frame.size.width;
     
     firstLabel.frame = CGRectMake((screenWidth/2 - 150/2), 100, 150, 20);
-    firstLabel.text = @"First Screen";
+    firstLabel.text = @"ViewController2 Screen";
     firstLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:firstLabel];
     

@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ActorObc : NSObject
 
 //これがないとswiftから呼べない。
 - (void)tappedButton;
+
+- (void)tappedButton2;
+
+//+ (instancetype)sharedApplication;
+- (instancetype)initLabel1;
+
 
 @end

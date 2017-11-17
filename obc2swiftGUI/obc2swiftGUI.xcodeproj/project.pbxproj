@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8522DF8B1FBEB3E7008F54F3 /* BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8522DF8A1FBEB3E7008F54F3 /* BadgeView.m */; };
 		CE6EE1D81FBE807B006B0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE1D71FBE807B006B0FC6 /* AppDelegate.swift */; };
 		CE6EE1DA1FBE807B006B0FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE1D91FBE807B006B0FC6 /* ViewController.swift */; };
 		CE6EE1DD1FBE807B006B0FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE1DB1FBE807B006B0FC6 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8522DF891FBEB3E7008F54F3 /* BadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeView.h; sourceTree = "<group>"; };
+		8522DF8A1FBEB3E7008F54F3 /* BadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeView.m; sourceTree = "<group>"; };
 		CE6EE1D41FBE807B006B0FC6 /* obc2swiftGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obc2swiftGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6EE1D71FBE807B006B0FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6EE1D91FBE807B006B0FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				CE6EE1E91FBE80E5006B0FC6 /* Actor.swift */,
 				CE6EE1EC1FBE89AB006B0FC6 /* ActorObc.h */,
 				CE6EE1ED1FBE89AB006B0FC6 /* ActorObc.m */,
+				8522DF891FBEB3E7008F54F3 /* BadgeView.h */,
+				8522DF8A1FBEB3E7008F54F3 /* BadgeView.m */,
 				CE6EE1F21FBE8F12006B0FC6 /* ViewController2.h */,
 				CE6EE1F31FBE8F12006B0FC6 /* ViewController2.m */,
 				CE6EE1DB1FBE807B006B0FC6 /* Main.storyboard */,
@@ -156,6 +161,7 @@
 				CE6EE1D81FBE807B006B0FC6 /* AppDelegate.swift in Sources */,
 				CE6EE1F41FBE8F12006B0FC6 /* ViewController2.m in Sources */,
 				CE6EE1EE1FBE89AB006B0FC6 /* ActorObc.m in Sources */,
+				8522DF8B1FBEB3E7008F54F3 /* BadgeView.m in Sources */,
 				CE6EE1EA1FBE80E5006B0FC6 /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
