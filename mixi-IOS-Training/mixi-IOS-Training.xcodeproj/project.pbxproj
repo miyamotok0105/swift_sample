@@ -13,9 +13,11 @@
 		CE6EE2091FBF5355006B0FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE2081FBF5355006B0FC6 /* Assets.xcassets */; };
 		CE6EE20C1FBF5355006B0FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE20A1FBF5355006B0FC6 /* LaunchScreen.storyboard */; };
 		CE6EE2141FBF5A5C006B0FC6 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE2131FBF5A5C006B0FC6 /* SampleViewController.swift */; };
-		CE6EE2161FBF5E00006B0FC6 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE2151FBF5E00006B0FC6 /* ModalViewController.swift */; };
-		CE6EE2191FBF5E76006B0FC6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE2171FBF5E76006B0FC6 /* PostViewController.swift */; };
-		CE6EE21A1FBF5E76006B0FC6 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE2181FBF5E76006B0FC6 /* PostViewController.xib */; };
+		CE6EE2161FBF5E00006B0FC6 /* BaseModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE2151FBF5E00006B0FC6 /* BaseModalViewController.swift */; };
+		CE6EE2211FBFD3C5006B0FC6 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE21F1FBFD3C5006B0FC6 /* ModalViewController.swift */; };
+		CE6EE2221FBFD3C5006B0FC6 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE2201FBFD3C5006B0FC6 /* ModalViewController.xib */; };
+		CE6EE2251FBFD42F006B0FC6 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE2231FBFD42F006B0FC6 /* ChildViewController.swift */; };
+		CE6EE2261FBFD42F006B0FC6 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE2241FBFD42F006B0FC6 /* ChildViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +29,11 @@
 		CE6EE20B1FBF5355006B0FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6EE20D1FBF5355006B0FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6EE2131FBF5A5C006B0FC6 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		CE6EE2151FBF5E00006B0FC6 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
-		CE6EE2171FBF5E76006B0FC6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		CE6EE2181FBF5E76006B0FC6 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		CE6EE2151FBF5E00006B0FC6 /* BaseModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModalViewController.swift; sourceTree = "<group>"; };
+		CE6EE21F1FBFD3C5006B0FC6 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		CE6EE2201FBFD3C5006B0FC6 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		CE6EE2231FBFD42F006B0FC6 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		CE6EE2241FBFD42F006B0FC6 /* ChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +66,28 @@
 		CE6EE2001FBF5355006B0FC6 /* mixi-IOS-Training */ = {
 			isa = PBXGroup;
 			children = (
+				CE6EE2271FBFD453006B0FC6 /* 1.4ModalViewControllerBasic */,
 				CE6EE2011FBF5355006B0FC6 /* AppDelegate.swift */,
 				CE6EE2031FBF5355006B0FC6 /* ViewController.swift */,
 				CE6EE2131FBF5A5C006B0FC6 /* SampleViewController.swift */,
-				CE6EE2151FBF5E00006B0FC6 /* ModalViewController.swift */,
 				CE6EE2051FBF5355006B0FC6 /* Main.storyboard */,
-				CE6EE2171FBF5E76006B0FC6 /* PostViewController.swift */,
-				CE6EE2181FBF5E76006B0FC6 /* PostViewController.xib */,
 				CE6EE2081FBF5355006B0FC6 /* Assets.xcassets */,
 				CE6EE20A1FBF5355006B0FC6 /* LaunchScreen.storyboard */,
 				CE6EE20D1FBF5355006B0FC6 /* Info.plist */,
 			);
 			path = "mixi-IOS-Training";
+			sourceTree = "<group>";
+		};
+		CE6EE2271FBFD453006B0FC6 /* 1.4ModalViewControllerBasic */ = {
+			isa = PBXGroup;
+			children = (
+				CE6EE2151FBF5E00006B0FC6 /* BaseModalViewController.swift */,
+				CE6EE21F1FBFD3C5006B0FC6 /* ModalViewController.swift */,
+				CE6EE2201FBFD3C5006B0FC6 /* ModalViewController.xib */,
+				CE6EE2231FBFD42F006B0FC6 /* ChildViewController.swift */,
+				CE6EE2241FBFD42F006B0FC6 /* ChildViewController.xib */,
+			);
+			path = 1.4ModalViewControllerBasic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +149,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6EE21A1FBF5E76006B0FC6 /* PostViewController.xib in Resources */,
+				CE6EE2221FBFD3C5006B0FC6 /* ModalViewController.xib in Resources */,
 				CE6EE20C1FBF5355006B0FC6 /* LaunchScreen.storyboard in Resources */,
 				CE6EE2091FBF5355006B0FC6 /* Assets.xcassets in Resources */,
+				CE6EE2261FBFD42F006B0FC6 /* ChildViewController.xib in Resources */,
 				CE6EE2071FBF5355006B0FC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,11 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6EE2161FBF5E00006B0FC6 /* ModalViewController.swift in Sources */,
+				CE6EE2161FBF5E00006B0FC6 /* BaseModalViewController.swift in Sources */,
+				CE6EE2211FBFD3C5006B0FC6 /* ModalViewController.swift in Sources */,
 				CE6EE2041FBF5355006B0FC6 /* ViewController.swift in Sources */,
 				CE6EE2021FBF5355006B0FC6 /* AppDelegate.swift in Sources */,
 				CE6EE2141FBF5A5C006B0FC6 /* SampleViewController.swift in Sources */,
-				CE6EE2191FBF5E76006B0FC6 /* PostViewController.swift in Sources */,
+				CE6EE2251FBFD42F006B0FC6 /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

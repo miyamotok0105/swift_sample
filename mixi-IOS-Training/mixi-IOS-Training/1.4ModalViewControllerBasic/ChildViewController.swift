@@ -1,5 +1,5 @@
 //
-//  PostViewController.swift
+//  ChildViewController.swift
 //  mixi-IOS-Training
 //
 //  Created by USER on 2017/11/18.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
-    
-//    protocol ChildViewControllerDelegate: class { // [1] プロトコルの宣言
-//        func childViewController(_ viewController: PostViewController, didTapCloseButton button: UIButton)
-//    }
+//
+protocol ChildViewControllerDelegate: class { // [1] プロトコルの宣言
+    func childViewController(_ viewController: ChildViewController, didPressCloseButton button: UIButton)
+}
+
+class ChildViewController: UIViewController {
+
+    weak var delegate: ChildViewControllerDelegate? // [2] delegate オブジェクト
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +28,8 @@ class PostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func closeBtnTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
+    @IBAction func pressClosedButton(_ sender: UIButton) {
+        delegate?.childViewController(self, didPressCloseButton: sender)
     }
     
     /*
