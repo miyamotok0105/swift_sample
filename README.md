@@ -28,3 +28,6 @@ https://github.com/soapyigu/Swift30Projects
 
 https://github.com/psharanda/vmc2
 
+- swift3-tutorial
+
+https://github.com/alexcomu/swift3-tutorial
