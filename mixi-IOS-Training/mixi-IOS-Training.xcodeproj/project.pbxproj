@@ -18,6 +18,14 @@
 		CE6EE2221FBFD3C5006B0FC6 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE2201FBFD3C5006B0FC6 /* ModalViewController.xib */; };
 		CE6EE2251FBFD42F006B0FC6 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EE2231FBFD42F006B0FC6 /* ChildViewController.swift */; };
 		CE6EE2261FBFD42F006B0FC6 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6EE2241FBFD42F006B0FC6 /* ChildViewController.xib */; };
+		CED7B2AA1FC0A13F008E62E7 /* SecondViewController21.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2A91FC0A13F008E62E7 /* SecondViewController21.swift */; };
+		CED7B2AD1FC142AD008E62E7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2AC1FC142AD008E62E7 /* CustomView.swift */; };
+		CED7B2AF1FC143CF008E62E7 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED7B2AE1FC143CF008E62E7 /* CustomView.xib */; };
+		CED7B2B11FC144C4008E62E7 /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2B01FC144C4008E62E7 /* MVCViewController.swift */; };
+		CED7B2B41FC152EC008E62E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2B31FC152EC008E62E7 /* User.swift */; };
+		CED7B2B61FC1530E008E62E7 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2B51FC1530E008E62E7 /* UserPresenter.swift */; };
+		CED7B2B81FC1532D008E62E7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2B71FC1532D008E62E7 /* UserService.swift */; };
+		CED7B2BA1FC15348008E62E7 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7B2B91FC15348008E62E7 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,14 @@
 		CE6EE2201FBFD3C5006B0FC6 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		CE6EE2231FBFD42F006B0FC6 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		CE6EE2241FBFD42F006B0FC6 /* ChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
+		CED7B2A91FC0A13F008E62E7 /* SecondViewController21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController21.swift; sourceTree = "<group>"; };
+		CED7B2AC1FC142AD008E62E7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		CED7B2AE1FC143CF008E62E7 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		CED7B2B01FC144C4008E62E7 /* MVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCViewController.swift; sourceTree = "<group>"; };
+		CED7B2B31FC152EC008E62E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CED7B2B51FC1530E008E62E7 /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
+		CED7B2B71FC1532D008E62E7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CED7B2B91FC15348008E62E7 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				CE6EE2271FBFD453006B0FC6 /* 1.4ModalViewControllerBasic */,
+				CED7B2A81FC09F7D008E62E7 /* 2.1UIView */,
+				CED7B2AB1FC141EB008E62E7 /* 5.1mvc1 */,
+				CED7B2B21FC152BB008E62E7 /* 5.2mvp1 */,
 				CE6EE2011FBF5355006B0FC6 /* AppDelegate.swift */,
 				CE6EE2031FBF5355006B0FC6 /* ViewController.swift */,
 				CE6EE2131FBF5A5C006B0FC6 /* SampleViewController.swift */,
@@ -88,6 +107,35 @@
 				CE6EE2241FBFD42F006B0FC6 /* ChildViewController.xib */,
 			);
 			path = 1.4ModalViewControllerBasic;
+			sourceTree = "<group>";
+		};
+		CED7B2A81FC09F7D008E62E7 /* 2.1UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CED7B2A91FC0A13F008E62E7 /* SecondViewController21.swift */,
+			);
+			path = 2.1UIView;
+			sourceTree = "<group>";
+		};
+		CED7B2AB1FC141EB008E62E7 /* 5.1mvc1 */ = {
+			isa = PBXGroup;
+			children = (
+				CED7B2AC1FC142AD008E62E7 /* CustomView.swift */,
+				CED7B2AE1FC143CF008E62E7 /* CustomView.xib */,
+				CED7B2B01FC144C4008E62E7 /* MVCViewController.swift */,
+			);
+			path = 5.1mvc1;
+			sourceTree = "<group>";
+		};
+		CED7B2B21FC152BB008E62E7 /* 5.2mvp1 */ = {
+			isa = PBXGroup;
+			children = (
+				CED7B2B31FC152EC008E62E7 /* User.swift */,
+				CED7B2B51FC1530E008E62E7 /* UserPresenter.swift */,
+				CED7B2B71FC1532D008E62E7 /* UserService.swift */,
+				CED7B2B91FC15348008E62E7 /* UserViewController.swift */,
+			);
+			path = 5.2mvp1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +202,7 @@
 				CE6EE2091FBF5355006B0FC6 /* Assets.xcassets in Resources */,
 				CE6EE2261FBFD42F006B0FC6 /* ChildViewController.xib in Resources */,
 				CE6EE2071FBF5355006B0FC6 /* Main.storyboard in Resources */,
+				CED7B2AF1FC143CF008E62E7 /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,12 +213,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED7B2AA1FC0A13F008E62E7 /* SecondViewController21.swift in Sources */,
+				CED7B2AD1FC142AD008E62E7 /* CustomView.swift in Sources */,
+				CED7B2BA1FC15348008E62E7 /* UserViewController.swift in Sources */,
 				CE6EE2161FBF5E00006B0FC6 /* BaseModalViewController.swift in Sources */,
 				CE6EE2211FBFD3C5006B0FC6 /* ModalViewController.swift in Sources */,
+				CED7B2B11FC144C4008E62E7 /* MVCViewController.swift in Sources */,
 				CE6EE2041FBF5355006B0FC6 /* ViewController.swift in Sources */,
 				CE6EE2021FBF5355006B0FC6 /* AppDelegate.swift in Sources */,
 				CE6EE2141FBF5A5C006B0FC6 /* SampleViewController.swift in Sources */,
+				CED7B2B81FC1532D008E62E7 /* UserService.swift in Sources */,
+				CED7B2B41FC152EC008E62E7 /* User.swift in Sources */,
 				CE6EE2251FBFD42F006B0FC6 /* ChildViewController.swift in Sources */,
+				CED7B2B61FC1530E008E62E7 /* UserPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
